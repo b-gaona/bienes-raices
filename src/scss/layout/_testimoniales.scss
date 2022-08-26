@@ -1,0 +1,34 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.testimoniales {
+  &__contenido {
+    background-color: var(--verde);
+    padding: 2rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    @include m.desktop {
+      padding: 1rem 2rem 15rem;
+    }
+  }
+  &__info,
+  &__autor {
+    color: var(--blanco);
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  &__info::before {
+    content: "";
+    height: 5rem;
+    width: 5rem;
+    margin-right: 2rem;
+    background-image: url(../img/comilla.svg);
+    display: inline-block;
+  }
+  &__autor {
+    align-self: flex-end;
+    padding-inline: 2rem;
+  }
+}

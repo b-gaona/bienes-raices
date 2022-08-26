@@ -1,0 +1,43 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.formulario {
+  margin-top: 2rem;
+  
+  &__campo {
+    padding-bottom: 2rem;
+  }
+  &__legend {
+    font-size: 2rem;
+    color: var(--negro);
+  }
+  &__label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    color: var(--negro);
+  }
+  &__contacto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 30rem;
+
+    input[type="radio"] {
+      margin: 0;
+      width: auto;
+    }
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-block: .5rem;
+  }
+  &__boton {
+    @include m.boton(var(--verde), var(--blanco));
+    display: block;
+    margin-inline: auto;
+    padding-inline: 5rem;
+  }
+}

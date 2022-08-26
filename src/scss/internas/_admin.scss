@@ -1,0 +1,59 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.tabla-propiedades {
+  margin-top: 3rem;
+  width: 100%;
+  border-spacing: 0;
+  
+  thead {
+    background-color: var(--verde);
+    font-size: 2rem;
+    th {
+      color: var(--blanco);
+      padding: 2rem;
+    }
+  }
+  tbody {
+    background-color: var(--gris);
+    text-align: center;
+    font-size: 2rem;
+
+    td {
+      height: 23rem;
+      padding: 1rem;
+      color: var(--negro);
+    }
+  }
+  .contenedor-botones {
+    display: flex;
+    flex-direction: column;
+  }
+  .imagen-tabla {
+    min-width: 20rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+.contenedor-tabla {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  @include m.tablet{
+      overflow-x: hidden;
+  }
+}
+
+.imagen-modificar{
+  width: 20rem;
+}
+
+.admin-opciones{
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
